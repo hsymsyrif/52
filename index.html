@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGIS</title>
+    <title>WebGIS Geotagging</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
 </head>
 <body>
-    <div class="sidebar">
-        <img src="img/logo.jpg" alt="Logo" class="logo">
-        <ul class="menu">
-            <li><a href="webgis.html"><i class="fas fa-map"></i> WebGIS</a></li>
-            <hr>
-            <li><a href="comparison.html"><i class="fas fa-exchange-alt"></i> Perbandingan</a></li>
-            <hr>
-            <li><a href="map-inspect.html"><i class="fas fa-search"></i> Map Inspect</a></li>
-        </ul>
-        <ul class="menu-bottom">
-            <hr>
-            <li><a href="about-help.html"><i class="fas fa-info-circle"></i> About & Help</a></li>
-        </ul>
-    </div>
-    
-    <div class="content">
-        <h1>Selamat Datang di WebGIS</h1>
-        <p>Pilih menu di sidebar untuk melihat detail lebih lanjut.</p>
+    <!-- Sidebar akan dimuat di sini -->
+    <div id="sidebar-container"></div>
+    <div class="container">
+        <h1 style="color: yellow;">WebGIS</h1>
+        <!-- Peta berada di dalam kotak -->
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- Data tampil di bawah peta -->
+        <div id="data-info">
+            <p>Nama Lokasi: <span id="nama-lokasi">Pilih lokasi di peta</span></p>
+            <p>Jumlah Jiwa: <span id="jumlah-jiwa">0</span></p>
+            <p>Jumlah Bangunan: <span id="jumlah-bangunan">0</span></p>
+            <p>Informasi Tambahan: <span id="info-tambahan">-</span></p>
+        </div>
     </div>
 
+    <script src="js/sidebar.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

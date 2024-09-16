@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About & Help</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
-    <div class="sidebar">
-        <img src="img/logo.jpg" alt="Logo" class="logo">
-        <ul>
-            <li><a href="webgis.html">WebGIS</a></li>
-            <hr>
-            <li><a href="comparison.html">Perbandingan</a></li>
-            <hr>
-            <li><a href="map-inspect.html">Map Inspect</a></li>
-            <hr>
-            <li><a href="about-help.html">About & Help</a></li>
-        </ul>
-    </div>
+    <!-- Sidebar akan dimuat di sini -->
+    <div id="sidebar-container"></div>
 
     <div class="content">
         <section id="about-help">
@@ -29,5 +20,8 @@
             <p>Website ini menyediakan layanan WebGIS untuk memvisualisasikan data geografis dan perbandingan berdasarkan tahun tertentu.</p>
         </section>
     </div>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
